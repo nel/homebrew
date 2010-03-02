@@ -17,8 +17,8 @@ class Exim <Formula
       s.gsub!('/usr/exim', prefix)
       s.gsub!('/var/spool/exim', var + 'spool/exim')
       #reported in http://github.com/mxcl/homebrew/issues/issue/818 but work without on my system
-      s << "LOOKUP_INCLUDE=-I#{prefix+'include'}\n"
-      s << "LOOKUP_LIBS=-L#{prefix+'lib'}\n"
+      s << "LOOKUP_INCLUDE=-I#{HOMEBREW_PREFIX}/include\n"
+      s << "LOOKUP_LIBS=-L#{HOMEBREW_PREFIX}/lib\n"
    end
      
     inreplace 'OS/Makefile-Darwin' do |s|
