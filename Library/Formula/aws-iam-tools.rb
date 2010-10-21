@@ -3,7 +3,7 @@ require 'formula'
 class AwsIamTools < Formula
   head 'http://awsiammedia.s3.amazonaws.com/public/tools/cli/latest/IAMCli.zip'
   homepage 'http://developer.amazonwebservices.com/connect/entry.jspa?externalID=4143&categoryID=322'
-  md5 '294cc368706588e74e51c113946e494a'
+  md5 'ee3d6d5ec0be8a68044973289211f14c'
 
   def install
     rm Dir['*.cmd'] # Remove Windows versions
@@ -35,7 +35,7 @@ class AwsIamTools < Formula
         * On Bash, add them to `~/.bash_profile`.
         * On Zsh, add them to `~/.zprofile` instead.
       export JAVA_HOME="/Library/Java/Home/"
-      export AWS_IAM_HOME="#{prefix+'jars'}"
+      export AWS_IAM_HOME="#{prefix}/jars"
       export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
     EOS
   end
